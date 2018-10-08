@@ -12,3 +12,4 @@ public class TimeServerResource {
         return "Time: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd. MMMM yyyy, hh:mm:ss"));
     }
 }
+
