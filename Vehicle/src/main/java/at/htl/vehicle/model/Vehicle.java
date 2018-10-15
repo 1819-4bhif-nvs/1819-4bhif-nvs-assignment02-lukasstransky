@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Vehicle {
+    private Long id;
     private String brand;
     private String type;
 
@@ -22,6 +23,14 @@ public class Vehicle {
     //endregion
 
     //region Getter and Setter
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -2,9 +2,7 @@ package at.htl.vehicle.rest;
 
 import at.htl.vehicle.model.Vehicle;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,5 +19,16 @@ public class VehicleEndpoint {
         List<Vehicle> all = new ArrayList<>();
         all.add(find(42));
         return all;
+    }
+
+    @DELETE
+    @Path("{id}")
+    public void delete(@PathParam("id") long id){
+        System.out.printf("%d deleted ", id);
+    }
+
+    @POST
+    public void save(Vehicle vehicle) {
+        System.out.println("Vehicle = " + vehicle);
     }
 }
